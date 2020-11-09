@@ -46,7 +46,7 @@ class ClientesController extends Controller
         
        $datoscliente= request()->all();
         $campos=[
-            'rfc' =>'required|string|max:10|min:10|',
+            'rfc' =>'required|string|max:13|min:13|',
             'nombre' =>'required|string|max:50',
             'edad' =>'required|integer',
             'idciudad'=>'required|integer'

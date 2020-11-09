@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::resource('/', 'App\http\Controllers\ClientesController');
+Route::resource('/cliente', 'App\http\Controllers\ClientesController');
 
 Auth::routes();
 

@@ -1,14 +1,14 @@
     <div class="form-group">
         <label for="RFC" class="control.label"> {{'RFC'}}</label>
         @if(isset($cliente->rfc))
-            <input disabled type="text"  maxlength="10"
+            <input disabled type="text"  maxlength="13"
             class="form-control 
             {{$errors->has('rfc')?'is-invalid':''}}" name="rfc" id="rfc" 
             value="{{isset($cliente->rfc)?$cliente->rfc:old('rfc') }}">
         @else
-        <input  type="text" maxlength="10" placeholder="Introduzca RFC"
-        require pattern="[A-Z]{1,4}"
-        title="ESTA ERRORIO"
+        <input  type="text" maxlength="13" placeholder="Introduzca RFC"
+        require pattern="[A-Z]{4}[0-9]{6}[A-Z0-9]{3}"
+        title="Formato de RFC incorrecto"
          class="form-control {{$errors->has('rfc')?'is-invalid':''}}"  name="rfc" id="rfc" 
             value="{{isset($cliente->rfc)?$cliente->rfc:old('rfc') }}">
         @endif
